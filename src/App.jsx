@@ -1,33 +1,41 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import Sidebar from './components/Sidebar'
+
+const events = [
+  { title: 'Meeting', start: new Date() }
+]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentEvents, setCurrentEvents] = useState([])
 
   return (
+    <div className="app-container">
+      <Sidebar
+        currentEvents={currentEvents}
+      />
+      <div className="calendar-container">
+        <h1>Calendar</h1>
+        <FullCalendar
+          plugins={[dayGridPlugin]}
+          initialView='dayGridMonth'
+          weekends={true}
+          events={events}
+          eventContent={renderEventContent}
+          eventsSet={setCurrentEvents}
+        />
+      </div>
+    </div>
+  )
+}
+
+function renderEventContent(eventInfo) {
+  return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
     </>
   )
 }
