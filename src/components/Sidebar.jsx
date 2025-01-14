@@ -17,6 +17,12 @@ export default function Sidebar(props) {
           {props.currentEvents.map(event => (
             <li key={event.id}>
               <b>{event.title}</b>
+              {event.extendedProps.description && (
+                <>
+                  <br/>
+                  <span className="event-description">{event.extendedProps.description}</span>
+                </>
+              )}
               <br/>
               {event.start?.toLocaleDateString()}
             </li>
