@@ -3,18 +3,12 @@ import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
 import "./index.css";
 import App from "./App.jsx";
+import { registerLicense } from '@syncfusion/ej2-base';
 
-// Access the environment variable
-const clerkPubKey = "pk_test_Z2l2aW5nLWdob3VsLTIxLmNsZXJrLmFjY291bnRzLmRldiQ";
-
-if (!clerkPubKey) {
-  throw new Error("Missing Publishable Key");
-}
+registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF5cXmBCfEx3QHxbf1x1ZFxMZVhbRHNPMyBoS35Rc0ViWHleeXFRRmlcU0Jy');
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ClerkProvider publishableKey={clerkPubKey}>
-      <App />
-    </ClerkProvider>
+    <App />
   </StrictMode>
 );
