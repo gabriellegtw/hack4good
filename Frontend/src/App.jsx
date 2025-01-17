@@ -3,6 +3,8 @@ import SignOut from "./components/SignOut";
 import SignUp from "./components/SignUp";
 import { useState, useEffect } from "react";
 import Calendar from "./Calendar";
+import Kaban from "./components/Kaban/Kaban";
+import "./App.css";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -22,15 +24,17 @@ const App = () => {
         <>
           <Calendar />
           <SignOut />
+          <Kaban />
         </>
       ) : signUp ? (
         <SignUp />
       ) : (
         <SignIn />
       )}
-      <p onClick={() => setSignUp(!signUp)}>
-        {signUp ? "Click Here to Sign Up" : "Click Here to Sign in"}
-      </p>
+      <br />
+      <a className="menu_links" onClick={() => setSignUp(!signUp)}>
+        {signUp ? "Click Here to Sign In" : "Click Here to Sign up"}
+      </a>
     </div>
   );
 };
