@@ -12,6 +12,11 @@
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-weight: bold;
 }
 
 .auth-form {
@@ -21,12 +26,23 @@
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group label {
+  margin-right: 10px;
+  width: 80px;
 }
 
 .form-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: white;
+  margin-top: 5px;
+  width: calc(100% - 90px);
 }
 
 .submit-button {
@@ -52,4 +68,9 @@
   margin: 0 auto 20px;
   width: 200px;
   height: auto;
+}
+
+.toggle-link {
+  text-align: center;
+  margin-top: 10px;
 } 
