@@ -13,7 +13,7 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           // init the event
           const initEvent = [
             {
-              title: 'Add a new Event',
+              title: "Sample",
               ['To do']: [],
               ['In progress']: [],
               ['Completed']: [],
@@ -59,7 +59,7 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       <header className='task-box-header'>
         <h1 className='task-box-title'>All Tasks</h1>
         <button className='remove-button' onClick={handleRemove}>
-          Remove this Event
+          Remove this board
         </button>
       </header>
       <DragDropContext onDragEnd={(result) => handleDragEnd(result)}>

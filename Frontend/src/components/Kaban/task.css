@@ -16,7 +16,8 @@
   margin-left: 35px;
   padding: 10px 10px;
   background: none;
-  border: 2px solid red;
+  border: 2px solid rgb(245, 173, 64);
+  color: rgb(245, 173, 64);
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
@@ -25,7 +26,7 @@
 
 .remove-button:hover {
   color: #fff;
-  background-color: red;
+  background-color: rgb(245, 173, 64);
   transition: 0.3s;
 }
 
@@ -134,7 +135,7 @@
 }
 
 .remove-bar:hover {
-  color: red;
+  color: rgb(247, 176, 247);
   font-size: 8em;
   line-height: 0.01em;
   transition: 0.5s;

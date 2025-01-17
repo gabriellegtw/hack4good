@@ -9,7 +9,7 @@ function Kaban() {
   const initEvent = useMemo(
     () => [
       {
-        title: "Add a new Event",
+        title: "Sample",
         ["To do"]: [],
         ["In progress"]: [],
         ["Completed"]: [],
