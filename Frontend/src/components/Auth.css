@@ -43,6 +43,7 @@
   background-color: white;
   margin-top: 5px;
   width: calc(100% - 90px);
+  color: black;
 }
 
 .submit-button {
