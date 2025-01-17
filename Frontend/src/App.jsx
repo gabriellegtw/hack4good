@@ -4,6 +4,7 @@ import SignOut from "./components/SignOut";
 import SignUp from "./components/SignUp";
 import Calendar from "./Calendar";
 import Kaban from "./components/Kaban/Kaban";
+import Separator from "./components/Separator";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -25,7 +26,9 @@ const App = () => {
       {isAuthenticated ? (
         <>
           <SignOut />
+          <Separator title="Calendar" />
           <Calendar />
+          <Separator title="Task Board" />
           <Kaban />
         </>
       ) : signUp ? (

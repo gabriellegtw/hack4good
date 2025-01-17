@@ -26,7 +26,7 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
 
   return (
     <div className='event-bar'>
-      <h1 className='event-bar-title'>Task tracker</h1>
+      <h1 className='event-bar-title'>Click '+' to add new boards</h1>
       <AddEventButton handleClick={handleAdd} />
       <div className='event-container'>
         {events.map((item) => (
