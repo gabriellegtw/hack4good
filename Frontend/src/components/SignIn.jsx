@@ -1,6 +1,7 @@
 import { useState } from "react";
+import './Auth.css';
 
-const SignIn = () => {
+const SignIn = ({ onToggle }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -70,6 +71,9 @@ const SignIn = () => {
             {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
+        <p onClick={onToggle} className="toggle-link">
+          Don't have an account? Click <a>here</a> to Sign Up
+        </p>
       </div>
     </div>
   );

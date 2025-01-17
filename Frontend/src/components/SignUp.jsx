@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './Auth.css'; // Import the CSS for styling
 
-const SignUp = () => {
+const SignUp = ({ onToggle }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,7 +24,7 @@ const SignUp = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Sign in failed");
+        throw new Error(data.message || "Sign up failed");
       }
 
       // Store the token in localStorage
@@ -71,6 +71,9 @@ const SignUp = () => {
             {loading ? "Signing up..." : "Sign Up"}
           </button>
         </form>
+        <p onClick={onToggle} className="toggle-link">
+          Already have an account? Click <a>here</a> to Sign In
+        </p>
       </div>
     </div>
   );
