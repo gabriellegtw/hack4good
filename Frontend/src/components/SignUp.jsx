@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Auth.css'; // Import the CSS for styling
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -39,10 +40,10 @@ const SignUp = () => {
   };
 
   return (
-    <div className="signin-container">
-      <div className="signin-card">
+    <div className="auth-container">
+      <div className="auth-card">
         <h2>Sign Up</h2>
-        <form onSubmit={handleSubmit} className="signin-form">
+        <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -67,7 +68,7 @@ const SignUp = () => {
           </div>
           {error && <div className="error-message">{error}</div>}
           <button type="submit" className="submit-button" disabled={loading}>
-            {loading ? "Signing in..." : "Sign Up"}
+            {loading ? "Signing up..." : "Sign Up"}
           </button>
         </form>
       </div>

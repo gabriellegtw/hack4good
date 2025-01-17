@@ -22,8 +22,8 @@ const App = () => {
     <div>
       {isAuthenticated ? (
         <>
-          <Calendar />
           <SignOut />
+          <Calendar />
           <Kaban />
         </>
       ) : signUp ? (

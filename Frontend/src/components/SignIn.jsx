@@ -39,10 +39,10 @@ const SignIn = () => {
   };
 
   return (
-    <div className="signin-container">
-      <div className="signin-card">
+    <div className="auth-container">
+      <div className="auth-card">
         <h2>Sign In</h2>
-        <form onSubmit={handleSubmit} className="signin-form">
+        <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input

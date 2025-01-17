@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -65,11 +69,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-/* This root refers to clerk's log in page */
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
