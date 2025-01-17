@@ -1,6 +1,6 @@
 import { useState } from "react";
-import './Auth.css';
-import logo from '../assets/logo.png';
+import "./Auth.css";
+import logo from "../assets/logo.png";
 
 const SignIn = ({ onToggle }) => {
   const [email, setEmail] = useState("");
@@ -14,13 +14,16 @@ const SignIn = ({ onToggle }) => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://hack4good-tu17.onrender.com/api/auth/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import './Auth.css'; // Import the CSS for styling
-import logo from '../assets/logo.png'; // Adjust the path as necessary
+import "./Auth.css"; // Import the CSS for styling
+import logo from "../assets/logo.png"; // Adjust the path as necessary
 
 const SignUp = ({ onToggle }) => {
   const [email, setEmail] = useState("");
@@ -14,13 +14,16 @@ const SignUp = ({ onToggle }) => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://hack4good-tu17.onrender.com/api/auth/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 
