@@ -5,7 +5,10 @@ const SignOut = () => {
 
   return (
     <div>
+      {console.log(localStorage.getItem("token"))}
+      {console.log("ToEKN")}
       <h1>Welcome Back!</h1>
+      <h1>{}</h1>
       <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
