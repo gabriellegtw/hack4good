@@ -1,0 +1,8 @@
+.separator {
+  background-color: #f0e68c; /* Pastel color */
+  border-radius: 10px; /* Rounded edges */
+  padding: 10px; /* Padding around the text */
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Margin for spacing */
+  font-weight: bold; /* Make the text bold */
+} 
