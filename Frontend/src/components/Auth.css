@@ -45,4 +45,11 @@
 .error-message {
   color: red;
   margin-top: 10px;
+}
+
+.auth-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  height: auto;
 } 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Auth.css';
+import logo from '../assets/logo.png';
 
 const SignIn = ({ onToggle }) => {
   const [email, setEmail] = useState("");
@@ -42,6 +43,7 @@ const SignIn = ({ onToggle }) => {
   return (
     <div className="auth-container">
       <div className="auth-card">
+        <img src={logo} alt="Logo" className="auth-logo" />
         <h2>Sign In</h2>
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">

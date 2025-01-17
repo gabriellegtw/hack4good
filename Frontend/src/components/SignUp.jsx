@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Auth.css'; // Import the CSS for styling
+import logo from '../assets/logo.png'; // Adjust the path as necessary
 
 const SignUp = ({ onToggle }) => {
   const [email, setEmail] = useState("");
@@ -42,6 +43,7 @@ const SignUp = ({ onToggle }) => {
   return (
     <div className="auth-container">
       <div className="auth-card">
+        <img src={logo} alt="Logo" className="auth-logo" />
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
