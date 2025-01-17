@@ -1,6 +1,8 @@
 import { useState } from "react";
+import './Auth.css';
+import logo from '../assets/logo.png';
 
-const SignIn = () => {
+const SignIn = ({ onToggle }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -39,10 +41,11 @@ const SignIn = () => {
   };
 
   return (
-    <div className="signin-container">
-      <div className="signin-card">
+    <div className="auth-container">
+      <div className="auth-card">
+        <img src={logo} alt="Logo" className="auth-logo" />
         <h2>Sign In</h2>
-        <form onSubmit={handleSubmit} className="signin-form">
+        <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -70,6 +73,9 @@ const SignIn = () => {
             {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
+        <p onClick={onToggle} className="toggle-link">
+          Don't have an account? Click <a>here</a> to Sign Up
+        </p>
       </div>
     </div>
   );
